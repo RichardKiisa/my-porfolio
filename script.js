@@ -1,32 +1,19 @@
-//alert("welcome to my porfolio website!");
-function showMessage(){
-    alert("hello richard, javascript is working");
+const display =
+document.getElementsById("display");
+function appendValue(value) {
+    display.value += value;
 }
-function toggleDarkMode() {
-    document.body.classList.toggle("dark");
+function clearDisplay() {
+    display.value ="";
 }
-let images =[
-    "dan shan.png",
-    "rich.png",
-    "richard.png",
-    "ricky.jpg/"
-];
-let current =0;
-function nextslide(){
-    current++;
-    if (current >=images.length){
-        current=0;
-    }
-    document.getElementById("slide").src= images
-    [current];
+function deleteLast(){
+    display.value = display.value.slice(0,-1);
 }
-function prevslide(){
-    current--;
-    if (current < 0){
-        (current =images.length - 1);
-    }
-    document.getElementById("slide").src= images
-    [current];
+function calculate(){
+    try{
+    display.value = eval(display.value);
 }
-/*AUTO SLIDE*/
-setinterval(nextslide,3000);
+catch (error) {
+    display.value = "Error";
+}
+}

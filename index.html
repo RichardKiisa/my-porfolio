@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" >
-    <head>
-        <meta charset="utf-8" name="viewpoint" content="width=device-width,initial-scale=1.0">
-        <title> my first website</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<html lang="EN">
+    <head><meta charset="utf-8"><meta name="viewpoint" content="width=device-width,initial-scale=1.0"
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="stytle.css">
+</head>
     <body>
-        <!--header-->
-        <header><h2>MY WEBSITE</h2>
-        <nav>
-            <a href="index.html" class="active" >HOME</a>
-            <a href="about.html" class="active">ABOUT</a>
-             <a href="project.html" class="active">PROJECTS</a>
-            <a href="contact.html" class="active" >CONTACT</a>
-        </nav>
-        </header>
-        <!-- hero section -->
-         <section class="hero">
-               
-            <h1>Hi, I'm Richard </h1>
-            <p> Aspiring Software Engineer from Uganda</p>
-<a href="project.html" class="active">
-            <button onclick="showMessage()"> View My Work</button>
-</a>
-           </section>
-         
-           <script src="script.js">
-          
-           </script>
+     <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button onclick="cleardisplay()">c</button>
+               <button onclick="appendvalue('/')">/</button>
+                  <button onclick="appendvalue('*')">*</button>
+                     <button onclick="deletelast()">del</button>
+                        <button onclick="appendvalue('7')">7</button>
+                           <button onclick="appendvalue('8')">8</button>
+                              <button onclick="appendvalue('9')">9</button>
+                                 <button onclick="appendvalue('-')">-</button>
+                                    <button onclick="appendvalue('4')">4</button>
+                                       <button onclick="appendvalue('5')">5</button>
+                                          <button onclick="appendvalue('6')">6</button>
+                                             <button onclick="appendvalue('+')">+</button>
+                                                <button onclick="appendvalue('1')">1</button>
+                                                   <button onclick="appendvalue('2')">2</button>
+                                                      <button onclick="appendvalue('3')">3</button>
+                                                         <button onclick="calculate()">=</button>
+                                                            <button onclick="appendvalue('0')">0</button>
+                                                               <button onclick="appendvalue('.')">.</button>
+        </div>
+     </div>
+     <script src="script.js"></script>
     </body>
 </html>
